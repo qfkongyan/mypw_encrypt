@@ -325,8 +325,7 @@ struct const_des_ctx *const_des_init(void)
 #define comp_maskr      (D.comp_maskr     )
 #define psbox           (D.psbox          )
 
-static struct des_ctx*
-des_init(struct des_ctx *ctx, const struct const_des_ctx *cctx)
+struct des_ctx *des_init(struct des_ctx *ctx, const struct const_des_ctx *cctx)
 {
 	int i, j, b, k, inbit, obit;
 	uint32_t p;

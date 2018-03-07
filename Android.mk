@@ -20,7 +20,7 @@ LOCAL_SRC_FILES := pw_encrypt.c \
 	pw_encrypt_md5.c \
 	pw_encrypt_des.c
 
-LOCAL_CFLAGS += -Wno-int-conversion -Wno-implicit-function-declaration -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-int-conversion -Wno-implicit-function-declaration
 
 #include $(BUILD_SHARED_LIBRARY)
 #include $(BUILD_EXECUTABLE)
@@ -47,7 +47,7 @@ LOCAL_MODULE    := $(LOCAL_MODULE_NAME)
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 
 LOCAL_SRC_FILES := mycrypt.c
-#LOCAL_CFLAGS += -Wall
+LOCAL_CFLAGS +=  -Wno-unused-parameter
 
 #include $(BUILD_SHARED_LIBRARY)
 include $(BUILD_EXECUTABLE)

@@ -16,7 +16,6 @@ char *pw_encrypt(const char *key, const char *salt)
 #endif
 	}
 
-	return NULL;
 	if (!des_cctx)
 		des_cctx = const_des_init();
 	des_ctx = des_init(des_ctx, des_cctx);

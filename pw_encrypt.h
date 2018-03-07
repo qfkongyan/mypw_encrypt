@@ -120,6 +120,7 @@ void sha512_end(sha512_ctx_t *ctx, void *resbuf);
 char *sha_crypt(/*const*/ char *key_data, /*const*/ char *salt_data);
 struct const_des_ctx *const_des_init(void);
 char *des_crypt(struct des_ctx *ctx, char output[DES_OUT_BUFSIZE], const unsigned char *key, const unsigned char *setting);
+struct des_ctx *des_init(struct des_ctx *ctx, const struct const_des_ctx *cctx);
 char *pw_encrypt(const char *key, const char *salt);
 
 #endif
