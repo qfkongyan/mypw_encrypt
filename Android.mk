@@ -16,9 +16,11 @@ LOCAL_MODULE    := $(LOCAL_MODULE_NAME)
 LOCAL_SRC_FILES := pw_encrypt.c \
 	pw_encrypt_sha.c \
 	utils.c \
-	hash_md5_sha.c
+	hash_md5_sha.c \
+	pw_encrypt_md5.c \
+	pw_encrypt_des.c
 
-LOCAL_CFLAGS += -Wno-int-conversion -Wno-implicit-function-declaration
+LOCAL_CFLAGS += -Wno-int-conversion -Wno-implicit-function-declaration -Wno-unused-parameter
 
 #include $(BUILD_SHARED_LIBRARY)
 #include $(BUILD_EXECUTABLE)
