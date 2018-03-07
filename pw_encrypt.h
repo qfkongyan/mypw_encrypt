@@ -20,7 +20,6 @@
 # define FIX_ALIASING __attribute__((__may_alias__))
 typedef uint64_t bb__aliased_uint64_t FIX_ALIASING;
 
-
 typedef struct md5_ctx_t {
         uint8_t wbuffer[64]; /* always correctly aligned for uint64_t */
         void (*process_block)(struct md5_ctx_t*);
@@ -110,6 +109,8 @@ char* xstrdup(const char *s);
 char* to64(char *s, unsigned v, int n);
 int i64c(int i);
 
+void  md5_begin(md5_ctx_t *ctx);
+void  md5_end(md5_ctx_t *ctx, void *resbuf);
 char *md5_crypt(char result[MD5_OUT_BUFSIZE], const unsigned char *pw, const unsigned char *salt);
 void md5_hash(md5_ctx_t *ctx, const void *buffer, size_t len);
 void sha1_end(sha1_ctx_t *ctx, void *resbuf);
